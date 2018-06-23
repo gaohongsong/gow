@@ -17,6 +17,7 @@ iris(req/s)     |43370  |7476   |92
 工具并发请求测试，16线程+100并发，持续30s：
 
 ```
+############## 0ms
 ➜  wrk git:(master) ./wrk -t16 -c100 -d30s http://localhost:8080/
 Running 30s test @ http://localhost:8080/
   16 threads and 100 connections
@@ -37,6 +38,7 @@ Running 30s test @ http://localhost:8000/
 Requests/sec:  43370.81
 Transfer/sec:      5.29MB
 
+############## 10ms
 ➜  wrk git:(master) ./wrk -t16 -c100 -d30s http://localhost:8080/
 Running 30s test @ http://localhost:8080/
   16 threads and 100 connections
@@ -56,6 +58,8 @@ Running 30s test @ http://localhost:8000/
   225046 requests in 30.10s, 27.47MB read
 Requests/sec:   7476.12
 Transfer/sec:      0.91MB
+
+############## 1000ms
 ➜  wrk git:(master) ./wrk -t16 -c100 -d30s http://localhost:8080/
 Running 30s test @ http://localhost:8080/
   16 threads and 100 connections
